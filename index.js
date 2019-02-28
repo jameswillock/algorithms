@@ -1,17 +1,32 @@
 const { filledArray } = require('./utilities');
-
-const numbers = filledArray(1000);
-
 const { shuffle, selectionSort, findSmallest } = require('./sorting');
-
-console.log(shuffle([3, 2, 1]));
-console.log(selectionSort([56, 45, 76, 23, 1, 577]));
-console.log(findSmallest([56, 4557, 43, 2235, 112, 3, 23]));
-
 const { binarySearch, stupidSearch } = require('./search');
 
-console.log(stupidSearch([1, 2, 3, 4, 5], 5));
-console.log(binarySearch([1, 2, 3, 4, 5], 5));
+// Create collection of 10000 integers
+const numbers = filledArray(1000),
+	  finalNunber = numbers[numbers.length - 1];
 
-const { countdown } = require('./recursion');
-console.log(typeof countdown(10));
+// Shuffled using `shuffle()`
+console.time("shuffle()");
+const shuffled = shuffle(numbers);
+console.timeEnd("shuffle()");
+
+// Find smallest index
+console.time("findSmallest()");
+const smallestIndex = findSmallest(shuffled);
+console.timeEnd("findSmallest()");
+
+// Sort by value
+console.time("selectionSort()");
+const sorted = selectionSort(shuffled);
+console.timeEnd("selectionSort()");
+
+// Stupid search for member
+console.time("stupidSearch()");
+const stupidSearchIndex = stupidSearch(numbers, finalNumber);
+console.timeEnd("stupidSearch()");
+
+// Binary search for member
+console.time("binarySearch()");
+const binarySearchIndex = stupidSearch(numbers, finalNumber);
+console.timeEnd("binarySearch()");
