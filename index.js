@@ -4,7 +4,7 @@ const { binarySearch, stupidSearch } = require('./search');
 
 // Create collection of 10000 integers
 const numbers = filledArray(1000),
-	  finalNunber = numbers[numbers.length - 1];
+      finalNumber = numbers[numbers.length - 1];
 
 // Shuffled using `shuffle()`
 console.time("shuffle()");
@@ -15,6 +15,7 @@ console.timeEnd("shuffle()");
 console.time("findSmallest()");
 const smallestIndex = findSmallest(shuffled);
 console.timeEnd("findSmallest()");
+console.log("findSmallest returned", smallestIndex);
 
 // Sort by value
 console.time("selectionSort()");
@@ -25,8 +26,10 @@ console.timeEnd("selectionSort()");
 console.time("stupidSearch()");
 const stupidSearchIndex = stupidSearch(numbers, finalNumber);
 console.timeEnd("stupidSearch()");
+console.log("stupidSearch returned", stupidSearchIndex);
 
 // Binary search for member
 console.time("binarySearch()");
 const binarySearchIndex = stupidSearch(numbers, finalNumber);
 console.timeEnd("binarySearch()");
+console.log("binarySearch returned", binarySearchIndex);
