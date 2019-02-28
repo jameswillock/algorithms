@@ -4,8 +4,7 @@ const { binarySearch, stupidSearch } = require('./search');
 const { nonRecursiveSumArray, recursiveSumArray, recursiveLength, nonRecursiveLength } = require('./recursion'); 
 
 // Create collection of 10000 integers
-const sortNumbers = filledArray(1000),
-      finalSortNumber = sortNumbers[sortNumbers.length - 1];
+const sortNumbers = filledArray(1000);
 
 // Shuffled using `shuffle()`
 console.time("shuffle()");
@@ -20,7 +19,7 @@ console.log("findSmallest returned", smallestIndex);
 
 // Sort by value
 console.time("selectionSort()");
-const sorted = selectionSort(shuffled);
+selectionSort(shuffled);
 console.timeEnd("selectionSort()");
 
 // Instantiate 100_000 integers in an array
