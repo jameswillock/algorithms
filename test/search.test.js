@@ -7,7 +7,7 @@ describe('stupidSearch', () => {
   context('when member exists in collection', () => {
     const find = numbers[numbers.length - 1];
     
-    it('should return the index of the item', function() {
+    it('should return the index of the item', () => {
       const foundIndex = stupidSearch(numbers, find);
       assert.equal(foundIndex, numbers.length - 1);
     });
@@ -29,7 +29,7 @@ describe('binarySearch', () => {
   context('when member exists in collection', () => {
     const find = numbers[numbers.length - 1];
   
-    it('should return the index of the item', function() {
+    it('should return the index of the item', () => {
       const foundIndex = binarySearch(numbers, find);
       assert.equal(foundIndex, numbers.length - 1);
     });
