@@ -1,5 +1,5 @@
 const { filledArray } = require('./utilities');
-const { shuffle, selectionSort, findSmallest } = require('./sorting');
+const { shuffle, selectionSort, findSmallest, quickSort } = require('./sorting');
 const { binarySearch, stupidSearch } = require('./search');
 const { nonRecursiveSumArray, recursiveSumArray, recursiveLength, nonRecursiveLength } = require('./recursion'); 
 
@@ -64,3 +64,8 @@ console.time("nonRecursiveLength()");
 const countArrayLength2 = nonRecursiveLength(countArray);
 console.timeEnd("nonRecursiveLength()");
 console.log("nonRecursiveLength returned", countArrayLength2);
+
+// Sort by value using quicksort
+console.time("quickSort()");
+quickSort(shuffled);
+console.timeEnd("quickSort()");

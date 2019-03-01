@@ -52,7 +52,7 @@ const findSmallest = collection => {
 
 // Sort the collection by its smallest to largest
 // Depends on `findSmallest()` to determine smallest member
-// O(n) - linear time
+// O(n x n)
 const selectionSort = collection => {
   // Instantiate a new collection to hold the sorted values
   // Clone the original collection so we don't modify it
@@ -77,4 +77,30 @@ const selectionSort = collection => {
   return sorted;
 };
 
-module.exports = { findSmallest, selectionSort, shuffle };
+const quickSort = collection => {
+  // Base case: if collection is 0 or 1 in length,
+  // it doesn't need to be sorted
+  if (collection.length < 2) return collection;
+
+  // Assume pivot is the first member
+  // Hold collections for each member smaller or larger
+  const pivot = collection[0],
+        smaller = [],
+        larger = [];
+
+  // Iterate over collection, except first member
+  for (let index = 1; index < collection.length; index++) {
+    // If member is smaller than pivot, put into smaller
+    if (collection[index] <= pivot) {
+      smaller.push(collection[index]);
+    // If mmeber is larger, put into larger
+    } else {
+      larger.push(collection[index]);
+    }
+  }
+
+  // Recursion – return the newly sorted collection
+  return quickSort(smaller).concat(pivot, quickSort(larger));
+};
+
+module.exports = { findSmallest, selectionSort, shuffle, quickSort };
