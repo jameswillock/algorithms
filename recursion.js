@@ -23,7 +23,7 @@ const nonRecursiveLength = collection => {
 // Sum the contents of an array using recursion
 const recursiveSumArray = collection => {
   // If the collection is empty, return zero
-  if (!collection.length) return 0;
+  if (collection.length < 1) return 0;
   
   // If the collection is non-empty, shift the first
   // element, and add it to the sum'd value of the rest
@@ -33,6 +33,8 @@ const recursiveSumArray = collection => {
 
 // Sum the contents of an array without recursion
 const nonRecursiveSumArray = collection => {
+  if (collection.length < 1) return 0;
+
   let sum = collection[0];
 
   for (let index = 1; index < collection.length; index++) {
