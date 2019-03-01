@@ -14,7 +14,6 @@ describe('stupidSearch', () => {
   });
 
   context('when member is missing from collection', () => {
-    
     it('should return null', function() {
       const foundIndex = stupidSearch(numbers, missing);
       assert.equal(foundIndex, null);
