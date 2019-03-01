@@ -65,7 +65,7 @@ const countArrayLength2 = nonRecursiveLength(countArray);
 console.timeEnd("nonRecursiveLength()");
 console.log("nonRecursiveLength returned", countArrayLength2);
 
-// Sort by value using quicksort
+// Sort by value using quickSort
 console.time("quickSort()");
 quickSort(shuffled);
 console.timeEnd("quickSort()");

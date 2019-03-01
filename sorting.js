@@ -93,7 +93,7 @@ const quickSort = collection => {
     // If member is smaller than pivot, put into smaller
     if (collection[index] <= pivot) {
       smaller.push(collection[index]);
-    // If mmeber is larger, put into larger
+    // If member is larger, put into larger
     } else {
       larger.push(collection[index]);
     }

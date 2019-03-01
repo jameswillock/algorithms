@@ -1,7 +1,7 @@
 const assert = require('assert');
 const { quickSort } = require('../sorting');
 
-describe('quickSort()', () => {
+describe('quickSort', () => {
   const numbers = [4, 7, 2, 4, 10, 7, 3, 2, 5, 7];
 
   it('returns the ordered collection', () => {
