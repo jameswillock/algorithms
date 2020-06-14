@@ -2,8 +2,8 @@ const assert = require('assert');
 const { binarySearch, stupidSearch } = require('../search');
 
 const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-      find = 10,
-      missing = 11;
+  find = 10,
+  missing = 11;
 
 describe('stupidSearch', () => {
   context('when member exists in collection', () => {

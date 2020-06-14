@@ -17,10 +17,10 @@ const stupidSearch = (collection, item) => {
 const binarySearch = (collection, item) => {
   // Set boundary as start and end of collection
   let low = 0,
-      high = collection.length - 1;
+    high = collection.length - 1;
 
   // Loop over potential candidates
-    while (low <= high) {
+  while (low <= high) {
     // Choose middle of collection as guess candidate
     let middle = Math.trunc((low + high) / 2),
       guess = collection[middle];

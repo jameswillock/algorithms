@@ -7,8 +7,8 @@ const shuffle = collection => {
   // Store current index (last element in collection),
   // a temporary value and random index
   let currentIndex = collectionClone.length,
-      temporaryValue,
-      randomIndex;
+    temporaryValue,
+    randomIndex;
   
   // Loop for each index in the collection		
   while (currentIndex) {
@@ -34,7 +34,7 @@ const findSmallest = collection => {
   // Assume the smallest is the first element
   // cache value for comparison
   let smallestIndex = 0,
-      smallest = collection[smallestIndex];
+    smallest = collection[smallestIndex];
 
   for (let index = 0; index < collection.length; index++) {
     // If iterated item is smaller than last
@@ -56,14 +56,14 @@ const selectionSort = collection => {
   // Instantiate a new collection to hold the sorted values
   // Clone the original collection so we don't modify it
   const sorted = [],
-        collectionClone = collection.slice(0);
+    collectionClone = collection.slice(0);
   
   // Loop whilst collectionClone still has contents
   while (collectionClone.length) {
     // Find the smallest item in the clone
     // Hold the index and value
     const smallestIndex = findSmallest(collectionClone),
-          smallest = collectionClone[smallestIndex];
+      smallest = collectionClone[smallestIndex];
     
     // Push the smallest value into the new collection
     sorted.push(smallest);
@@ -84,8 +84,8 @@ const quickSort = collection => {
   // Assume pivot is the first member
   // Hold collections for each member smaller or larger
   const pivot = collection[0],
-        smaller = [],
-        larger = [];
+    smaller = [],
+    larger = [];
 
   // Iterate over collection, except first member
   for (let index = 1; index < collection.length; index++) {
