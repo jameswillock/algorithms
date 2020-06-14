@@ -21,8 +21,6 @@ jobs:
         run: npm ci
       - name: Lint
         run: npm run lint
-      - name: Check prettier
-        run: npm run prettier
       - name: Run tests
         run: npm test
       - name: Upload code coverage
