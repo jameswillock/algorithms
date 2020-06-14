@@ -4,7 +4,7 @@
   "description": "Simple algorithms implemented with JavaScript",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
+    "test": "nyc --reporter=clover --cache=false mocha",
     "lint": "eslint ."
   },
   "repository": {
@@ -19,6 +19,7 @@
   "homepage": "https://github.com/jameswillock/algorithms#readme",
   "devDependencies": {
     "eslint": "^7.2.0",
-    "mocha": "^8.0.1"
+    "mocha": "^8.0.1",
+    "nyc": "^15.1.0"
   }
 }
