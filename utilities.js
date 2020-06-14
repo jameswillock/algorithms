@@ -1,6 +1,6 @@
 const filledArray = (total) =>
   Array(total)
     .fill()
-    .map((item, index) => index);
+    .map((_, index) => index);
 
 module.exports = { filledArray };
