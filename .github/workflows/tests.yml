@@ -3,8 +3,6 @@ on: [push, pull_request]
 jobs:
   test:
     name: Node.js ${{ matrix.node-version }} on ${{ matrix.os }}
-    env:
-      TEST_MODE: true
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
