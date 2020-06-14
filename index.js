@@ -1,71 +1,83 @@
-const { filledArray } = require('./utilities');
-const { shuffle, selectionSort, findSmallest, quickSort } = require('./sorting');
-const { binarySearch, stupidSearch } = require('./search');
-const { nonRecursiveSumArray, recursiveSumArray, recursiveLength, nonRecursiveLength } = require('./recursion'); 
+#! /usr/bin/env node
+
+const { filledArray } = require("./utilities");
+const {
+  shuffle,
+  selectionSort,
+  findSmallest,
+  quickSort,
+} = require("./sorting");
+const { binarySearch, stupidSearch } = require("./search");
+const {
+  nonRecursiveSumArray,
+  recursiveSumArray,
+  recursiveLength,
+  nonRecursiveLength,
+} = require("./recursion");
 
 // Create collection of 10000 integers
 const sortNumbers = filledArray(1000);
 
 // Shuffled using `shuffle()`
-console.time('shuffle()');
+console.time("shuffle()");
 const shuffled = shuffle(sortNumbers);
-console.timeEnd('shuffle()');
+console.timeEnd("shuffle()");
 
 // Find smallest index
-console.time('findSmallest()');
+console.time("findSmallest()");
 const smallestIndex = findSmallest(shuffled);
-console.timeEnd('findSmallest()');
-console.log('findSmallest returned', smallestIndex);
+console.timeEnd("findSmallest()");
+console.log("findSmallest returned", smallestIndex);
 
 // Sort by value
-console.time('selectionSort()');
+console.time("selectionSort()");
 selectionSort(shuffled);
-console.timeEnd('selectionSort()');
+console.timeEnd("selectionSort()");
 
 // Instantiate 100_000 integers in an array
 const searchNumbers = filledArray(100000),
   finalSearchNumber = searchNumbers[searchNumbers.length - 1];
 
 // Stupid search for member
-console.time('stupidSearch()');
+console.time("stupidSearch()");
 const stupidSearchIndex = stupidSearch(searchNumbers, finalSearchNumber);
-console.timeEnd('stupidSearch()');
-console.log('stupidSearch returned', stupidSearchIndex);
+console.timeEnd("stupidSearch()");
+console.log("stupidSearch returned", stupidSearchIndex);
 
 // Binary search for member
-console.time('binarySearch()');
+console.time("binarySearch()");
 const binarySearchIndex = binarySearch(searchNumbers, finalSearchNumber);
-console.timeEnd('binarySearch()');
-console.log('binarySearch returned', binarySearchIndex);
+console.timeEnd("binarySearch()");
+console.log("binarySearch returned", binarySearchIndex);
 
 const recursiveSumNumbers = filledArray(100);
 const nonRecursiveSumNumbers = recursiveSumNumbers.slice(0);
 
 // Sum array via recursion
-console.time('recursiveSumArray()');
+console.time("recursiveSumArray()");
 const recursiveSum = recursiveSumArray(recursiveSumNumbers);
-console.timeEnd('recursiveSumArray()');
-console.log('recursiveSumArray returned', recursiveSum);
+console.timeEnd("recursiveSumArray()");
+console.log("recursiveSumArray returned", recursiveSum);
 
 // Sum array without recursion
-console.time('nonRecursiveSumArray()');
+console.time("nonRecursiveSumArray()");
 const nonRecursiveSum = nonRecursiveSumArray(nonRecursiveSumNumbers);
-console.timeEnd('nonRecursiveSumArray()');
-console.log('nonRecursiveSumArray returned', nonRecursiveSum);
+console.timeEnd("nonRecursiveSumArray()");
+console.log("nonRecursiveSumArray returned", nonRecursiveSum);
 
 // Count the length of an array via recursion
 const countArray = filledArray(100);
-console.time('recursiveLength()');
+console.time("recursiveLength()");
 const countArrayLength = recursiveLength(countArray);
-console.timeEnd('recursiveLength()');
-console.log('recursiveLength returned', countArrayLength);
+console.timeEnd("recursiveLength()");
+console.log("recursiveLength returned", countArrayLength);
 
-console.time('nonRecursiveLength()');
+console.time("nonRecursiveLength()");
 const countArrayLength2 = nonRecursiveLength(countArray);
-console.timeEnd('nonRecursiveLength()');
-console.log('nonRecursiveLength returned', countArrayLength2);
+console.timeEnd("nonRecursiveLength()");
+console.log("nonRecursiveLength returned", countArrayLength2);
 
 // Sort by value using quickSort
-console.time('quickSort()');
+console.time("quickSort()");
 quickSort(shuffled);
-console.timeEnd('quickSort()');
+console.timeEnd("quickSort()");

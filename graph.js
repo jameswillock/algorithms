@@ -1,16 +1,16 @@
 const mangoGraph = {
-  'you': ['alice', 'bob', 'claire'],
-  'bob': ['anuj', 'peggy'],
-  'alice': ['peggy'],
-  'claire': ['thom', 'jonny'],
-  'anuj': [],
-  'peggy': [],
-  'thom': [],
-  'jonny': []
+  you: ["alice", "bob", "claire"],
+  bob: ["anuj", "peggy"],
+  alice: ["peggy"],
+  claire: ["thom", "jonny"],
+  anuj: [],
+  peggy: [],
+  thom: [],
+  jonny: [],
 };
 
 // Method to check if person is a mango seller
-const isSeller = name => name.split('').slice(-1)[0] === 'm';
+const isSeller = (name) => name.split("").slice(-1)[0] === "m";
 
 // Breadth-first search
 const search = (graph, name) => {
@@ -30,7 +30,7 @@ const search = (graph, name) => {
     if (!searched.has(person)) {
       if (isSeller(person)) {
         // Person is a seller
-        console.log(person, 'is seller');
+        console.log(person, "is seller");
         return true;
       } else {
         // Push persons connections into queue
@@ -47,4 +47,4 @@ const search = (graph, name) => {
   return false;
 };
 
-search(mangoGraph, 'you');
+search(mangoGraph, "you");

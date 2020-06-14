@@ -5,7 +5,7 @@ const stupidSearch = (collection, item) => {
   for (let index = 0; index < collection.length; index++) {
     if (collection[index] === item) return index;
   }
-  
+
   // We didn't find the item
   return null;
 };
@@ -24,25 +24,25 @@ const binarySearch = (collection, item) => {
     // Choose middle of collection as guess candidate
     let middle = Math.trunc((low + high) / 2),
       guess = collection[middle];
-      
+
     // If the guess is out of bounds, we reached the end
     // and can return early
-    if (typeof guess === 'undefined') return null;
+    if (typeof guess === "undefined") return null;
 
     // If we guessed correctly, return index of guess
     if (guess === item) return middle;
-    
+
     // If guess was larger than we're looking for,
     // then set high to be the first half of remaining
     if (guess > item) {
       high = middle - 1;
     } else {
-    // If guess was too low, set low to be the latter half
-    // of the remaining collection
+      // If guess was too low, set low to be the latter half
+      // of the remaining collection
       low = middle + 1;
     }
   }
-  
+
   // We didn't find the item in the collection
   return null;
 };
