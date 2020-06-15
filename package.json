@@ -13,7 +13,7 @@
     "url": "git+https://github.com/jameswillock/algorithms.git"
   },
   "author": "James Willock",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/jameswillock/algorithms/issues"
   },
@@ -22,7 +22,7 @@
     "coveralls": "^3.1.0",
     "eslint": "^7.2.0",
     "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-prettier": "^3.1.3",
+    "eslint-plugin-prettier": "^3.1.4",
     "mocha": "^8.0.1",
     "nyc": "^15.1.0",
     "prettier": "2.0.5"
