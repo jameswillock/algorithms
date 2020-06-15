@@ -79,7 +79,9 @@ const selectionSort = (collection) => {
 const quickSort = (collection) => {
   // Base case: if collection is 0 or 1 in length,
   // it doesn't need to be sorted
-  if (collection.length < 2) return collection;
+  if (collection.length < 2) {
+    return collection;
+  }
 
   // Assume pivot is the first member
   // Hold collections for each member smaller or larger
