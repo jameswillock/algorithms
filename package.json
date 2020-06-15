@@ -4,7 +4,7 @@
   "description": "Simple algorithms implemented with JavaScript",
   "main": "index.js",
   "scripts": {
-    "test": "nyc --reporter=clover --cache=false mocha",
+    "test": "nyc --reporter=lcovonly --cache=false mocha",
     "prettier": "prettier . --check !.nyc_output",
     "lint": "eslint ."
   },
@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/jameswillock/algorithms#readme",
   "devDependencies": {
+    "coveralls": "^3.1.0",
     "eslint": "^7.2.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.3",
