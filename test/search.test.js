@@ -1,9 +1,10 @@
 const assert = require("assert");
+const { filledArray } = require("../utilities");
 const { binarySearch, stupidSearch } = require("../search");
 
-const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-  find = 10,
-  missing = 11;
+const numbers = filledArray(1000),
+  find = 500,
+  missing = 1001;
 
 describe("stupidSearch", () => {
   context("when member exists in collection", () => {
