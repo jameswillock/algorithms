@@ -20,6 +20,13 @@ describe("stupidSearch", () => {
       assert.equal(index, null);
     });
   });
+
+  context("when collection is empty", () => {
+    it("should return null", () => {
+      const index = stupidSearch([], missing);
+      assert.equal(index, null);
+    });
+  });
 });
 
 describe("binarySearch", () => {
@@ -33,6 +40,13 @@ describe("binarySearch", () => {
   context("when member is missing from collection", () => {
     it("should return null", () => {
       const index = binarySearch(numbers, missing);
+      assert.equal(index, null);
+    });
+  });
+
+  context("when collection is empty", () => {
+    it("should return null", () => {
+      const index = binarySearch([], missing);
       assert.equal(index, null);
     });
   });
